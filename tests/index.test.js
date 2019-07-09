@@ -1,4 +1,4 @@
-const { multiplesOfN } = require('../lib/index');
+const { multiplesOfN, uniqueValues } = require('../lib/index');
 
 describe('mupltiples of n', () => {
   it('returns an array of nums that are mutiples of 5', () => {
@@ -16,5 +16,13 @@ describe('mupltiples of n', () => {
     const multiples = multiplesOfN(113);
     
     expect(multiples).toEqual([]);
+  });
+});
+
+describe('unique values', () => {
+  it('returns each unique value in an array', () => {
+    const uniqueValuesArray = uniqueValues([3, 3, 5, 3, 12, 7]);
+
+    expect(uniqueValuesArray).toEqual([3, 5, 12, 7]);
   });
 });
